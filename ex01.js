@@ -12,7 +12,7 @@ class Product{
         if (this.storage < 5) {
             storageLevel = 'baixo';
         } else {
-            storageLevel = 'alto';
+            storageLevel = 'adequado';
         }
         return storageLevel
     }
@@ -24,7 +24,7 @@ class Product{
 
         console.log(`Produto: ${this.name}\n`);
         console.log(`Categoria: ${this.category}\n`);
-        console.log(`Preço: ${Number(this.price)}\n`);
+        console.log(`Preço: R$ ${Number(this.price)}\n`);
         console.log(`Estoque: ${storageLevel}\n`);
 
         console.log(products);
@@ -38,7 +38,7 @@ class Product{
 
         console.log(`Produto: ${this.name} --- ${typeof(this.name)}\n`);
         console.log(`Categoria: ${this.category} --- ${typeof(this.category)}\n`);
-        console.log(`Preço: ${Number(this.price)} --- ${typeof(Number(this.price))}\n`);
+        console.log(`Preço: R$ ${Number(this.price)} --- ${typeof(Number(this.price))}\n`);
         console.log(`Estoque: ${storageLevel} --- ${typeof(storageLevel)}\n`);
 
         console.log(products);
@@ -46,6 +46,10 @@ class Product{
     }
 }
 
-const monitor = new Product('monitor', 'Informática', '899.90', 5);
+const monitor = new Product('Monitor', 'Informática', '899.90', 5);
 monitor.output()
 monitor.showType()
+
+const cadeira = new Product('Cadeira', 'Escritório', '450.00', 30)
+cadeira.output()
+cadeira.showType()
